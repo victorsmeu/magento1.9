@@ -1,0 +1,81 @@
+<config>
+    <modules>
+        <Test_SpecialProducts>
+            <version>0.1</version>
+        </Test_SpecialProducts>
+    </modules>
+    
+    <global>
+        <models>
+            <test_specialProducts>
+                <class>Test_SpecialProducts_Model</class>
+                <resourceModel>specialProducts_mysql4</resourceModel>
+            </test_specialProducts>
+            <specialProducts_mysql4>
+            <class>Test_SpecialProducts_Model_Mysql4</class>
+                <entities>
+                    <specialProducts>
+                        <table>test_specialproducts</table>
+                    </specialProducts>
+                </entities>
+            </specialProducts_mysql4>
+        </models>
+        
+        <resources>
+            <specialProducts_setup>
+                <setup>
+                    <module>Test_SpecialProducts</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </specialProducts_setup>
+            <specialProducts_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </specialProducts_write>
+            <specialProducts_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </specialProducts_read>
+        </resources>
+        
+        <blocks>
+            <test_specialProducts>
+                <class>Test_SpecialProducts_Block</class>
+            </test_specialProducts>
+        </blocks>
+        
+        <helpers>
+            <test_specialProducts>
+                <class>Test_SpecialProducts_Helper</class>
+            </test_specialProducts>
+        </helpers>
+        
+    </global>
+    
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Test_SpecialProducts after="Mage_Adminhtml">Test_SpecialProducts_Adminhtml</Test_SpecialProducts>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    
+    <adminhtml>
+        <layout>
+            <updates>
+                <specialproducts>
+                    <file>specialproducts.xml</file>
+                </specialproducts>
+            </updates>   
+       </layout>
+   </adminhtml>
+    
+</config>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+<!--    <adminhtml_spacialproducts_products>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="test_specialProducts/adminhtml_form_edit_tab_products" name="test_specialProducts/adminhtml_form_edit_tab_products"/>
+            <block type="adminhtml/widget_grid_serializer" name="product_grid_serializer">
+                <reference name="product_grid_serializer">
+                    <action method="initSerializerBlock">
+                        <grid_block_name>test_specialProducts/adminhtml_form_edit_tab_products</grid_block_name>
+                            <data_callback>getSelectedProducts</data_callback>
+                            <hidden_input_name>products</hidden_input_name>
+                            <reload_param_name>specialProducts_products</reload_param_name>
+                    </action>
+                    <action method="addColumnInputName">
+                        <input_name>position</input_name>
+                    </action>
+                </reference>
+            </block>
+        </block>
+    </adminhtml_spacialproducts_products>-->
+    
+    <test_specialProducts_adminhtml_spacialproducts_products>
+       <block type="core/text_list" name="root" output="toHtml">
+           <block type="test_specialProducts/adminhtml_specialproducts_edit_tab_grid" name="products.grid"/>
+           <block type="adminhtml/widget_grid_serializer" name="grid_serializer">
+               <reference name="grid_serializer">
+                   <action method="initSerializerBlock">
+                       <grid_block_name>products.grid</grid_block_name>
+                       <data_callback>getSelectedProducts</data_callback>
+                       <hidden_input_name>links[products]</hidden_input_name>
+                       <reload_param_name>products</reload_param_name>
+                   </action>
+                   <action method="addColumnInputName">
+                       <input_name>position</input_name>
+                   </action>                  
+               </reference>
+           </block>
+       </block>
+   </test_specialProducts_adminhtml_spacialproducts_products>
+   
+   <test_specialProducts_adminhtml_specialproducts_customergrid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="test_specialProducts/adminhtml_specialProducts_edit_tab_grid" name="products.grid"/>
+        </block>
+    </test_specialProducts_adminhtml_specialproducts_customergrid>
+<!--    <adminhtml_spacialproducts_productsgrid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="test_specialProducts/adminhtml_specialProducts_edit_tab_product" name="specialProducts.edit.tab.products"/>
+        </block>
+    </adminhtml_spacialproducts_productsgrid>-->
+</layout>

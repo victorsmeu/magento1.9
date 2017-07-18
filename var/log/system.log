@@ -1,0 +1,8 @@
+2017-07-14T14:57:36+00:00 DEBUG (7): HEADERS ALREADY SENT: <pre>[0] /application/public/app/code/core/Mage/Core/Controller/Response/Http.php:52
+[1] /application/public/lib/Zend/Controller/Response/Abstract.php:768
+[2] /application/public/app/code/core/Mage/Core/Controller/Response/Http.php:84
+[3] /application/public/app/code/core/Mage/Core/Controller/Varien/Front.php:184
+[4] /application/public/app/code/core/Mage/Core/Model/App.php:365
+[5] /application/public/app/Mage.php:684
+[6] /application/public/index.php:83
+</pre>

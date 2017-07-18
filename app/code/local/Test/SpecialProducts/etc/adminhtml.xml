@@ -1,0 +1,29 @@
+<config>
+    <menu>
+        <catalog translate="title" module="catalog">
+            <children>
+                <specialProducts translate="title" module="test_specialProducts">
+                    <title>Special Products</title>
+                    <sort_order>2</sort_order>
+                    <action>adminhtml/specialproducts/index</action>
+                </specialProducts>
+            </children>
+        </catalog>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <catalog translate="title" module="catalog">
+                        <children>                
+                            <specialProducts translate="title" module="test_specialProducts">
+                                <title>Special Products</title>
+                                <sort_order>2</sort_order>
+                            </specialProducts>
+                        </children>
+                    </catalog> 
+                </children>   
+            </admin>
+        </resources>
+    </acl>
+</config>    
